@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <ScrollView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView1">
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:stretchColumns="1">
+                <EditText
+                    android:inputType="number"
+                    android:hint="Level atual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/lvlAtual" />
+                <EditText
+                    android:inputType="number"
+                    android:hint="Experiência atual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/xpAtual" />
+                <EditText
+                    android:inputType="number"
+                    android:hint="Level desejado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/lvlFuturo" />
+                <TextView
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/txtXp" />
+                <TextView
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:id="@+id/txtLvl" />
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:weightSum="2">
+        <Button
+            android:text="Calcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btCalc" />
+    </LinearLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="@string/test_banner_ad_unit_id" />
+</LinearLayout>
